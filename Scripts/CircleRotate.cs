@@ -1,0 +1,3 @@
+﻿using UnityEngine;namespace Assets{    public class CircleRotate : MonoBehaviour    {        public int RotateSpeed = 15;        public bool RotateBackwards;        // Use this for initialization        void Start () {	        }	        // Update is called once per frame        void Update () {
+            if (RotateBackwards) transform.Rotate(Vector3.up * Time.deltaTime * RotateSpeed);
+            else transform.Rotate(Vector3.down * Time.deltaTime * RotateSpeed);        }    }}
